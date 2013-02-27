@@ -1,0 +1,572 @@
+/*  Code based off Chris Converse for Lynda.com - "Building an iPad App". Thanks!!  */
+
+@charset "UTF-8";
+
+
+#trailerbackground, video, #holdseverything, #socialbuttons, .home_content img {
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+
+/*RALPH AND FELIX */
+
+#ralphup, #ralphdown {
+margin-top: 434px;
+margin-left: -250px;	
+}
+
+#felixup, #felixdown {
+margin-left: 580px;	
+}
+
+
+.page.portrait #ralphup, .page.portrait #ralphdown {
+margin-top: 689px;
+margin-left: -225px;
+}
+
+.page.portrait #ralphup {
+visibility: hidden;
+}
+
+video {
+	opacity: 1;
+}
+
+.page.portrait #felixphup, .page.portrait #felixdown {
+	margin-left: 540px;
+}
+
+/* SETTING VIDEO STUFF */
+
+#videowrap {
+position: absolute;	
+}
+
+#miscchars {
+position: relative;
+top: -265px;
+left: 326px;
+}
+
+.page.portrait #miscchars {
+left: 210px;	
+}
+
+/*Gallery background*/
+#gallerystuff {
+	width: 1024px;
+	background: black;
+}
+
+
+/* HOMEPAGE */
+#homepagelandscape {
+	height: 618px;
+width: 1024px;
+background-image: url('../images/content/home.jpg');
+background-size: 1315px 628px;	
+background-position: -180px;
+}
+
+.page.portrait #homepagelandscape {
+	height: 874px;
+width: 768px;
+background-image: url('../images/content/homeportrait.jpg');
+background-size: 825px 914px;	
+background-position: -45px -40px;
+}
+
+
+
+/* VIDEO */
+video {
+border: 4px solid white;
+}
+
+.page.landscape video {
+  margin-left: 255px;
+  margin-top: 295px;
+}
+.page.portrait video {
+  margin-left: 134px;
+  margin-top: 550px;
+}
+
+
+
+/* TRAILER IMG */
+#trailerbackground {
+background-image: url('../images/content/totalbackground.png');
+background-repeat: no-repeat;
+background-size: 1024px 69px;
+}
+
+.page.landscape #trailerbackground {
+width: 1024px;
+height: 618px;
+background-position: 0px 540px;
+}
+.page.portrait #trailerbackground {
+width: 768px;
+height: 874px;
+background-position: 0px 795px;
+}
+
+/* SOCIAL BUTTONS */
+#socialbuttons img {
+	width: 100px;
+	margin-right: 25px;
+	margin-bottom: 25px;
+	position: relative;
+}
+
+/*SOCIAL BACKGROUND */
+
+#holdseverything {
+	position: absolute;
+width: 1640px;
+height: 887px;
+background-image: url('../images/content/linksbg.jpg');
+background-repeat: no-repeat;
+background-size: 1300px 703px;
+}
+
+.page.landscape #holdseverything {
+background-position: 40px -30px;	
+}
+
+.page.portrait #holdseverything {
+background-position: -140px 115px;	
+}
+
+.page.landscape #socialbuttons {
+position: relative;
+top: 220px;
+left: 190px;
+display: inline;	
+}
+
+.page.portrait #socialbuttons {
+position: relative;
+top: 210px;
+left: 135px;
+}
+
+.page.landscape #socialbuttons img {
+display: inline;	
+}
+
+.page.portrait #socialbuttons img {
+display: block;	
+}
+
+
+
+
+
+/* Global Styles */
+body { margin: 0px;
+padding: 0px;
+font-family: Helvetica;
+font-size: 16px;
+}
+
+h1 {
+	font-weight: normal;
+font-family: Helvetica;
+font-size: 48px;
+line-height: 50px;
+}
+
+h2 {
+font-family: Helvetica;
+font-size: 24px;
+}
+
+h3 { font-size: 1.2em;
+}
+
+p,ul {
+line-height: 22px;
+}
+
+a { color: #900;
+}
+
+.clear { clear: both;
+line-height: 1px;
+}
+
+/* Page-specific Styles */
+
+#gallerystuff {
+margin-top: 25px;
+}
+
+#gallerystuff img {
+		box-shadow: 0px 0px 50px 5px black;
+			-webkit-box-shadow: 0px 0px 50px 5px black;
+	-moz-box-shadow: 0px 0px 50px 5px black;
+}
+
+.home_content img {
+	width: 768px;
+	margin-top: -10px;
+}
+
+.home_content img:first-child {
+margin-top: 0px;	
+}
+.home_content img:last-child {
+	margin-bottom: -3px;
+}
+
+.page.portrait .home_content img {
+margin-left: 0px;	
+}
+
+.page.landscape .home_content img {
+margin-left: 127px;	
+}
+
+/* Global Layout */
+
+header  { display: block;
+position: absolute;
+top: 0px;
+left: 0px;
+height: 173px;
+background: black;
+background-image:url(../images/template/bannertop.jpg);
+background-size:1024px;
+}
+
+article { display: block;
+position: absolute;
+top: 70px;
+left: 0px;
+background: #000;
+}
+
+article .content_container { position: absolute;
+top: 0px;
+left: 0px;
+background: none;
+}
+
+article .content_container .content_loading_container { position: absolute;
+top: 0px;
+}
+
+footer  { display: block;
+position: absolute;
+bottom: 0px;
+left: 0px;
+height: 103px;
+background-image:url(../images/template/bannerbottom.jpg);
+background-size:1024px;
+
+}
+
+footer span  { position: absolute;
+top: 18px;
+right: 24px;
+font-size: 12px;
+}
+
+#trailerclick {
+	height: 41px;
+	margin-right:30px;
+}
+
+#galleryclick {
+	height:41px;
+	margin-right:30px;
+}
+
+#linksclick {
+	height: 41px;
+}
+
+#8bitname {
+	height:117px;
+}
+
+nav { position: absolute;
+bottom: 12px;
+left: 25px;
+font-family: 'frankenweeniemovieposterRg';
+font-size: 35px;
+color: #858688;
+}
+
+nav a {
+	margin-right: 50px;
+	color: #858688;
+}
+
+nav a.selected { background-position: 0px -43px;
+color: #E84715;
+}
+
+.ralphlogo { position:absolute;
+top:0px;
+left:0px;
+height: 97px;
+margin-left: 25px;
+margin-top: 20px;
+}
+
+.bydisney { position:absolute;
+top:3px;
+right:0px;
+height: 47px;
+margin-top: 18px;
+margin-right: 25px;
+}
+
+#disneylogo {
+	height:26px;
+	margin-left:270px;
+}
+
+
+
+.map_container { position: absolute;
+width: 300px;
+height: 300px;
+border: 1px solid #6aaa17;
+}
+
+.map_container.off { -webkit-transform: translate3d(1100px,190px,0px);
+}
+
+.map_container.on  { -webkit-transform: translate3d(375px,190px,0px);
+}
+
+.map_container #map_canvas { width: 100%;
+height: 100%;
+}
+
+.contact_us_content { width: 300px;
+}
+
+/* Page-specific Layout */
+.page.home article .content_container { background: /*url(../images/template/home_background.jpg) no-repeat 0px 0px*/#000;
+background-size: 1024px 748px;
+background-position: 0px;
+}
+.page article .content_container.contact_us { background: url(../images/content/contact_us_image.png?v=1) no-repeat right bottom;
+}
+
+
+/* Orientation-specific Layout - Landscape */
+.page.landscape  { position: relative;
+width: 1024px;
+height: 748px;
+overflow: hidden;
+}
+
+.page.landscape header  { width: 1024px;
+}
+
+.page.landscape article { width: 1024px;
+height: 575px;
+}
+
+.page.landscape footer  { width: 1024px;
+}
+
+.page.landscape article .content_container { width: 1024px;
+height: 618px;
+}
+
+.page.landscape.home .teapot_orange { position: absolute;
+-webkit-transform: translate3d(450px,300px,0px);
+}
+
+.page.landscape.home .teapot_clay   { position: absolute;
+-webkit-transform: translate3d(640px,140px,0px);
+}
+
+.page.landscape.home .teapot_blue   { position: absolute;
+-webkit-transform: translate3d(800px,170px,0px);
+}
+
+.page.landscape.home .teapot_black  { position: absolute;
+-webkit-transform: translate3d(770px,258px,0px);
+}
+
+
+.page.landscape .home_content { width: 410px;
+}
+
+.page.landscape .video_graphic { position: absolute;
+left: 325px;
+top: 0px;
+}
+
+
+
+
+/* Orientation-specific Layout - Portrait */
+.page.portrait { position: relative;
+width: 768px;
+height: 1004px;
+overflow: hidden;
+}
+
+.page.portrait header  { width: 768px;
+}
+
+.page.portrait article { width: 768px;
+height: 874px;
+}
+
+.page.portrait footer  { width: 768px;
+}
+
+
+.page.portrait article .content_container { width: 768px;
+height: 874px;
+}
+
+
+
+
+
+.page.portrait .home_content { width: 700px;
+}
+
+
+
+
+#felixdown {
+	margin-right:0px;
+}
+
+#felixup {
+	margin-left:-51px;
+	
+	animation: myfirst 5s infinite;
+-moz-animation: myfirst 5s infinite; /* Firefox */
+-webkit-animation: myfirst 5s infinite; /* Safari and Chrome */
+-o-animation: myfirst 5s infinite; /* Opera */
+}
+
+
+
+
+
+
+
+
+
+
+
+#ralphdown {
+	margin-right:0px;
+
+}
+
+#ralphup {
+	
+	margin-left:-115px;
+	animation: mysecond 4s infinite;
+-moz-animation: mysecond 4s infinite; /* Firefox */
+-webkit-animation: mysecond 4s infinite; /* Safari and Chrome */
+-o-animation: mysecond 4s infinite; /* Opera */
+}
+
+
+@keyframes mysecond
+{
+	0% {opacity:1;}
+30% {opacity:1;}
+31% {opacity:0;}
+100% {opacity:0;}
+	}
+
+@-moz-keyframes mysecond /* Firefox */
+{
+0% {opacity:1;}
+30% {opacity:1;}
+31% {opacity:0;}
+100% {opacity:0;}
+}
+
+@-webkit-keyframes mysecond /* Safari and Chrome */
+{
+0% {opacity:1;}
+30% {opacity:1;}
+31% {opacity:0;}
+100% {opacity:0;}
+}
+
+@-o-keyframes mysecond /* Opera */
+{
+0% {opacity:1;}
+30% {opacity:1;}
+31% {opacity:0;}
+100% {opacity:0;}
+} 
+
+
+
+
+
+
+
+
+
+@keyframes myfirst
+{
+	0% {opacity:1;}
+10% {opacity:1;}
+11% {opacity:0;}
+100% {opacity:0;}
+	}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+0% {opacity:1;}
+10% {opacity:1;}
+11% {opacity:0;}
+100% {opacity:0;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+0% {opacity:1;}
+10% {opacity:1;}
+11% {opacity:0;}
+100% {opacity:0;}
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+0% {opacity:1;}
+10% {opacity:1;}
+11% {opacity:0;}
+100% {opacity:0;}
+} 
+
+
+
+
+
+
+
+@font-face {
+    font-family: 'frankenweeniemovieposterRg';
+    src: url('../fonts/frankenweeniemovieposter-webfont.eot');
+    src: url('../fonts/frankenweeniemovieposter-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/frankenweeniemovieposter-webfont.woff') format('woff'),
+         url('../fonts/frankenweeniemovieposter-webfont.ttf') format('truetype'),
+         url('../fonts/frankenweeniemovieposter-webfont.svg#frankenweeniemovieposterRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
